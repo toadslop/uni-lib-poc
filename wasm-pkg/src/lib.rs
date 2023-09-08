@@ -1,14 +1,14 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+wai_bindgen_rust::export!("exports.wai");
+wai_bindgen_rust::import!("imports.wai");
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+struct Exports;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+impl exports::Exports for Exports {
+    fn init(_source: String) -> Result<(), String> {
+        Ok(())
+    }
+
+    fn execute() -> Result<exports::ExecResult, String> {
+        Ok(exports::ExecResult::Bool(true))
     }
 }

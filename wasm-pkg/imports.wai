@@ -1,0 +1,8 @@
+variant prop {
+    strng(string),
+    number(float64),
+    boolean(bool),
+    unknown,
+}
+
+get-prop: func(prop-name: string) -> expected<prop, string>

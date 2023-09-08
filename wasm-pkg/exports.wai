@@ -1,0 +1,7 @@
+union exec-result {
+    float64,
+    bool
+}
+
+init: func(source: string) -> expected<unit, string>
+execute: func() -> expected<exec-result, string>
