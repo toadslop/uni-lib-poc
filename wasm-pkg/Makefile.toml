@@ -1,0 +1,21 @@
+[tasks.build-wasm]
+command = "cargo"
+args = ["build", "--target", "wasm32-unknown-unknown"]
+
+[tasks.build-wasm-release]
+command = "cargo"
+args = ["build", "--target", "wasm32-unknown-unknown", "--release"]
+
+[tasks.gen-js]
+command = "cargo"
+args = [
+    "run",
+    "--manifest-path",
+    "C:\\Users\\bnhei\\source\\repos\\toadslop\\wai\\crates\\cli\\Cargo.toml",
+    "--",
+    "js",
+    "--import",
+    "imports.wai",
+    "--out-dir",
+    "..\\ts-pkg\\src\\gen",
+]

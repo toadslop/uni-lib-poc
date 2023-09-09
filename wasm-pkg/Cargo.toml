@@ -15,4 +15,7 @@ crate-type = ["cdylib", "rlib"]
 [package.metadata.wasmer]
 namespace = "toadslop"
 abi = "none"
-bindings = { wai-bindgen = "0.1.0", exports = "exports.wai", imports = "imports.wai" }
+
+bindings = { wai-bindgen = "0.1.0", exports = "exports.wai", imports = [
+    "imports.wai",
+], wai-version = "0.2.3" }
